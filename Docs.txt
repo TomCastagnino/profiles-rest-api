@@ -1,0 +1,15 @@
+django-admin.py startproject profiles_project .
+
+python manage.py startapp profiles_api
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'profiles_api',
+]
