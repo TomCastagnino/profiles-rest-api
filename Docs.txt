@@ -22,4 +22,13 @@ python manage.py runserver 0.0.0.0:8000
 Models:
     In Django we use models to describe the data we need for our application. Django uses this models to set up and configure our database. Each model in Django maps to a specific table in our database. Django manage the ORM for us.
 
-The way that Django manage the database is by creating a migration file that store all of the steps required to make our database match our Django's models. So every time you change or add a model to your project you need to create a new migration file. 
+Migrations:
+    python manage.py makemigrations <app_name>
+    python manage.py migrate <--- runs our migration
+    The way that Django manage the database is by creating a migration file that store all of the steps required to make our database match our Django's models. So every time you change or add a model to your project you need to create a new migration file.
+
+Enable Django Admin for our UserProfile model:
+    In admin.py:
+        from django.contrib import admin
+        from profiles_api import models
+        admin.site.register(models.UserProfile)
